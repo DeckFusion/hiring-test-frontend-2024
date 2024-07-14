@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brand Creation Form</title>
   <link rel="stylesheet" href="src/css/output.css" />
-  <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+  <script src="https://unpkg.com/htmx.org@2.0.1"></script>
   <script src="src/js/script.js" defer></script>
 </head>
 
 <body class="bg-gray-100">
     <main class="container mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg">
       <h1>Brand Creation</h1>
-      <section id="form-container" hx-get="step1.html" hx-trigger="load" hx-target="#form-container"></section>
+      <section id="form-container" hx-get="/src/html/step1.html" hx-trigger="load" hx-target="#form-container"></section>
   </main>
 </body>
 
