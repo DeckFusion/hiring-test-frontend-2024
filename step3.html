@@ -1,0 +1,27 @@
+<article id="step-3">
+    <header>
+        <h2 class="text-xl font-semibold mb-4">Typography</h2>
+    </header>
+    <form>
+        <div class="mb-4">
+            <label class="block text-gray-700" for="headingFont">Heading Font</label>
+            <select id="headingFont" name="headingFont" class="mt-1 p-2 border rounded w-full">
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700" for="bodyFont">Body Font</label>
+            <select id="bodyFont" name="bodyFont" class="mt-1 p-2 border rounded w-full">
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+        </div>
+        <nav class="flex justify-between">
+            <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded" hx-get="step2.html" hx-target="#form-container">Previous</button>
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" hx-get="step4.html" hx-target="#form-container">Next</button>
+        </nav>
+    </form>
+</article>

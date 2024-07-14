@@ -1,0 +1,20 @@
+<article id="step-2">
+    <header>
+        <h2 class="text-xl font-semibold mb-4">Visual Identity</h2>
+    </header>
+    <form>
+        <div class="mb-4">
+            <label class="block text-gray-700" for="logo">Upload Logo</label>
+            <input type="file" id="logo" name="logo" accept="image/*" class="mt-1 p-2 border rounded w-full">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">Brand Colors</label>
+            <input type="color" name="brandColor1" class="mt-1 p-2 border rounded w-60 h-20">
+            <input type="color" name="brandColor2" class="mt-1 p-2 border rounded w-60 h-20">
+        </div>
+        <nav class="flex justify-between">
+            <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded" hx-get="step1.html" hx-target="#form-container">Previous</button>
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" hx-get="step3.html" hx-target="#form-container">Next</button>
+        </nav>
+    </form>
+</article>
