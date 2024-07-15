@@ -10,6 +10,8 @@ Please complete this section with your project details.
 
 **How to Run the Project**
 
+You can view the running demo [here](https://usman-jamil.github.io/hiring-test-frontend-2024/)
+
 ```bash
 # Start Development Server
 npm run start
