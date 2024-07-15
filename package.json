@@ -1,0 +1,17 @@
+{
+  "name": "hiring-test-frontend-2024",
+  "version": "1.0.0",
+  "description": "Welcome to the hiring test for the Frontend Developer position at DeckFusion. This test is designed to evaluate your skills in frontend development, specifically in creating a \"Create Brand\" flow for a hypothetical SaaS platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./styles.css -o ./output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shadcn/ui": "^0.0.4",
+    "tailwindcss": "^3.4.4"
+  }
+}

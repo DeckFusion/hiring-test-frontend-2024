@@ -10,11 +10,19 @@ Please complete this section with your project details.
 
 **How to Run the Project**
 
-[Your instructions here]
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/hiring-test-frontend-2024.git
+   cd hiring-test-frontend-2024
+2. Open index.html in your browser.
 
 **Design Decisions**
 
-[Your explanation here]
+Multi-step Form: The form is divided into three steps to ensure a smooth user experience. Each step collects essential branding information.
+Responsive Design: Focused on desktop view as per the requirements.
+Form Validation: Implemented basic client-side validation to ensure required fields are filled out.
+Styling: Used Tailwind CSS for quick and efficient styling.
+JavaScript: Vanilla JavaScript is used for form navigation and validation to keep dependencies minimal.
 
 ---
 

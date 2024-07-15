@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Brand Flow</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <!--JS Scripts-->
+    <script src="/node_modules/@shadcn/ui/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <style>
+      /* Custom success toast style */
+      .toastify.toastify-success {
+        background-color: #48bb78;
+        color: #ffffff;
+      }
+      .progress-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3rem 0rem 1rem 0rem;
+    }
+    .progress-bar {
+      flex: 1;
+      height: 1rem;
+      border-radius: 0.5rem;
+      background-color: #e5e7eb;
+      position: relative;
+    }
+    .progress {
+      height: 100%;
+      border-radius: 0.5rem;
+      background-color: #3b82f6;
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .step-label {
+      position: absolute;
+      top: -2rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #6b7280;
+    }
+    .step-marker {
+      position: absolute;
+      top: -5px;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #3b82f6;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+    .step-marker.completed {
+      background-color: #48bb78;
+    }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+      <div
+        class="max-w-3xl mx-auto bg-white border border-gray-300 rounded-lg shadow-lg p-6"
+      >
+        <h1 class="text-3xl font-bold mb-6 text-center">Create Brand Flow</h1>
+        <!-- <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+          <div
+            id="progress-bar"
+            class="bg-blue-500 h-2.5 rounded-full"
+            style="width: 33%"
+          ></div>
+        </div> -->
+        <div class="progress-container">
+            <div class="progress-bar">
+              <div id="progress" class="progress"></div>
+              <div id="step1-marker" class="step-marker">1</div>
+              <div id="step2-marker" class="step-marker" style="left: 48%;">2</div>
+              <div id="step3-marker" class="step-marker" style="left: 98%;">3</div>
+              <div class="step-label" style="left: 0%;">Basic Info</div>
+              <div class="step-label" style="left: 44%;">Visual Identity</div>
+              <div class="step-label" style="left: 80%;">Additional Elements</div>
+            </div>
+          </div>
+        <form id="brand-form" class="space-y-8">
+          <!-- Step 1: Basic Info -->
+          <div id="step-1" class="step">
+            <h2 class="text-2xl font-bold mb-4">Basic Info</h2>
+            <div class="mb-4">
+              <label
+                for="company-name"
+                class="block text-sm font-medium text-gray-700"
+                >Company Name</label
+              >
+              <input
+                type="text"
+                id="company-name"
+                class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+              />
+              <span class="error-message hidden text-red-500 text-sm"
+                >This field is required.</span
+              >
+            </div>
+            <div class="mb-4">
+              <label
+                for="company-logo"
+                class="block text-sm font-medium text-gray-700"
+                >Company Logo</label
+              >
+              <input
+                type="file"
+                id="company-logo"
+                class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+              />
+              <span class="error-message hidden text-red-500 text-sm"
+                >This field is required.</span
+              >
+            </div>
+            <button
+              type="button"
+              class="shadcn-button next-step bg-blue-500 text-white px-4 py-2 rounded-md"
+            >
+              Next
+            </button>
+          </div>
+          <!-- Step 2: Visual Identity -->
+          <div id="step-2" class="step hidden">
+            <h2 class="text-2xl font-bold mb-4">Visual Identity</h2>
+            <div class="mb-4">
+              <label
+                for="brand-colors"
+                class="block text-sm font-medium text-gray-700"
+                >Brand Colors</label
+              >
+              <input
+                type="color"
+                id="brand-colors"
+                class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md px-2"
+                placeholder="Select a color"
+              />
+              <span class="error-message hidden text-red-500 text-sm"
+                >This field is required.</span
+              >
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="brand-fonts"
+                class="block text-sm font-medium text-gray-700"
+                >Body Fonts</label
+              >
+              <input
+                type="text"
+                id="brand-fonts"
+                class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+                pattern="[0-9]*"
+                title="Please enter numeric digits only"
+              />
+              <span class="error-message hidden text-red-500 text-sm"
+                >This field is required.</span
+              >
+            </div>
+            <button
+              type="button"
+              class="shadcn-button prev-step bg-gray-500 text-white px-4 py-2 rounded-md"
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              class="shadcn-button next-step bg-blue-500 text-white px-4 py-2 rounded-md"
+            >
+              Next
+            </button>
+          </div>
+          <!-- Step 3: Additional Elements -->
+          <div id="step-3" class="step hidden">
+            <h2 class="text-2xl font-bold mb-4">Additional Elements</h2>
+            <div class="mb-4">
+              <label
+                for="tagline"
+                class="block text-sm font-medium text-gray-700"
+                >Tagline/Slogan</label
+              >
+              <input
+                type="text"
+                id="tagline"
+                class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+              />
+              <span class="error-message hidden text-red-500 text-sm"
+                >This field is required.</span
+              >
+            </div>
+            <div class="mb-4">
+              <label
+                for="brand-description"
+                class="block text-sm font-medium text-gray-700"
+                >Brand Description</label
+              >
+              <textarea
+                id="brand-description"
+                class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+              ></textarea>
+              <span class="error-message hidden text-red-500 text-sm"
+                >This field is required.</span
+              >
+            </div>
+            <div class="mb-4">
+              <label
+                for="campaign-platform"
+                class="block text-sm font-medium text-gray-700"
+                >Campaign Platform</label
+              >
+              <select
+                id="campaign-platform"
+                class="shadcn-select mt-1 block w-full border border-gray-300 rounded-md p-2"
+              >
+                <option value="">Select a platform</option>
+                <option value="snapchat">Snapchat</option>
+                <option value="google">Google</option>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="tiktok">TikTok</option>
+              </select>
+              <span class="error-message hidden text-red-500 text-sm"
+                >This field is required.</span
+              >
+            </div>
+            <div class="mb-4">
+                <label
+                  for="social-media"
+                  class="block text-sm font-medium text-gray-700"
+                  >Social Media Links</label
+                >
+                <input
+                  type="text"
+                  id="social-media"
+                  class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+                  placeholder="Comma-separated URLs"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="mission-statement"
+                  class="block text-sm font-medium text-gray-700"
+                  >Mission Statement</label
+                >
+                <textarea
+                  id="mission-statement"
+                  class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+                ></textarea>
+              </div>
+              <div class="mb-4">
+                <label
+                  for="target-audience"
+                  class="block text-sm font-medium text-gray-700"
+                  >Target Audience</label
+                >
+                <input
+                  type="text"
+                  id="target-audience"
+                  class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="brand-voice"
+                  class="block text-sm font-medium text-gray-700"
+                  >Brand Voice</label
+                >
+                <select
+                  id="brand-voice"
+                  class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+                >
+                  <option value="professional">Professional</option>
+                  <option value="friendly">Friendly</option>
+                  <option value="casual">Casual</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label
+                  for="brand-guidelines"
+                  class="block text-sm font-medium text-gray-700"
+                  >Brand Guidelines Document</label
+                >
+                <input
+                  type="file"
+                  id="brand-guidelines"
+                  class="shadcn-input mt-1 block w-full border border-gray-300 rounded-md p-2"
+                />
+              </div>
+            <button
+              type="button"
+              class="shadcn-button prev-step bg-gray-500 text-white px-4 py-2 rounded-md"
+            >
+              Previous
+            </button>
+            <button
+              type="submit"
+              class="shadcn-button bg-green-500 text-white px-4 py-2 rounded-md"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
