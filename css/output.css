@@ -599,6 +599,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mr-2{
+  margin-right: 0.5rem;
+}
+
 .mt-1{
   margin-top: 0.25rem;
 }
@@ -615,8 +619,16 @@ video {
   display: flex;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
 .h-20{
   height: 5rem;
+}
+
+.w-10{
+  width: 2.5rem;
 }
 
 .w-60{
@@ -698,6 +710,11 @@ video {
 .text-gray-700{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-white{

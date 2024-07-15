@@ -1,0 +1,44 @@
+<article id="summary">
+    <header>
+        <h2 class="text-xl font-semibold mb-4">Summary</h2>
+    </header>
+    <div class="mb-4">
+        <label class="block text-gray-700">Company Name:</label>
+        <p id="companyNameSummary" class="mt-1 p-2 border rounded w-full"></p>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700">Company Slogan:</label>
+        <p id="companySloganSummary" class="mt-1 p-2 border rounded w-full"></p>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700">Logo:</label>
+        <img id="logoSummary"  class="mt-1 p-2 border rounded" style="width: 200px; height: 200px;" />
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700">Brand Colors:</label>
+        <div class="flex">
+            <div id="brandColor1Summary" class="mt-1 p-2 border rounded w-60 h-20 mr-2"></div>
+            <div id="brandColor2Summary" class="mt-1 p-2 border rounded w-60 h-20"></div>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700">Heading Font:</label>
+        <p id="headingFontSummary" class="mt-1 p-2 border rounded w-full"></p>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700">Body Font:</label>
+        <p id="bodyFontSummary" class="mt-1 p-2 border rounded w-full"></p>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700">Additional Notes:</label>
+        <p id="additionalNotesSummary" class="mt-1 p-2 border rounded w-full"></p>
+    </div>
+    <nav>
+        <button type="button" class="bg-green-500 text-white px-4 py-2 rounded" hx-get="html/step1.html"
+            hx-target="#form-container" onclick="finishAndRestart()">Finish</button>
+    </nav>
+</article>
+
+<script>
+    loadSummaryValues()
+</script>

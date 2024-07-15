@@ -1,0 +1,29 @@
+<article id="step-2">
+    <header>
+        <h2 class="text-xl font-semibold mb-4">Visual Identity</h2>
+    </header>
+    <form id="form-step-2">
+        <div class="mb-4">
+            <label class="block text-gray-700" for="logo">Upload Logo</label>
+            <input type="file" id="logo" name="logo" accept="image/*" class="mt-1 p-2 border rounded w-full"
+                onchange="saveLogo()">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">Brand Colors</label>
+            <input type="color" id="brandColor1" name="brandColor1" class="mt-1 p-2 border rounded w-10 h-10">
+            <input type="color" id="brandColor2" name="brandColor2" class="mt-1 p-2 border rounded w-10 h-10">
+        </div>
+        <div id="error-message" class="text-red-500 mb-4" style="display: none;"></div>
+        <nav class="flex justify-between">
+            <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded" hx-get="html/step1.html"
+                hx-target="#form-container" onclick="step2SaveAllValues()">Previous</button>
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded"
+                onclick="step2HandleNextClick(event)">Next</button>
+        </nav>
+    </form>
+</article>
+
+
+<script>
+    step2LoadAllValues()
+</script>
