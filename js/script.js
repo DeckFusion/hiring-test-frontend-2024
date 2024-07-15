@@ -117,19 +117,19 @@ function step2LoadAllValues() {
       }
   });
 
-  function imgShow(img){
-      const logoImage = document.createElement('img');
-      logoImage.src = logoData;
-      logoImage.style.width = '200px';
-      logoImage.style.height = '200px';
-      document.getElementById('logo').insertAdjacentElement('afterend', img);
-  }
-
   // Load logo
   const logoData = localStorage.getItem('logo');
   if (logoData) {
       imgShow(logoData)
   }
+}
+
+function imgShow(img){
+  const logoImage = document.createElement('img');
+  logoImage.src = img;
+  logoImage.style.width = '200px';
+  logoImage.style.height = '200px';
+  document.getElementById('logo').insertAdjacentElement('afterend', logoImage);
 }
 
 function step2ValidateForm() {

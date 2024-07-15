@@ -10,11 +10,24 @@ Please complete this section with your project details.
 
 **How to Run the Project**
 
-[Your instructions here]
+```bash
+# Start Development Server
+npm run start
+
+# Start Server with optimized build
+npm run start:optimized
+
+# Run the Build
+npm run build
+```
 
 **Design Decisions**
 
-[Your explanation here]
+ - We have opted to use HTMX pages
+ - We have used gulp to generate an optimized build
+ - We have used vanilla javascript without any frameworks
+ - Local storage has been used for state persistance across the form steps
+
 
 ---
 
