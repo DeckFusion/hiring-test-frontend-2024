@@ -1,0 +1,43 @@
+[project]
+name = "hiring-test-frontend-2024"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Full Name", email = "email@address.invalid" }
+]
+dependencies = [
+    "django>=5.0.7",
+    "django-tailwind>=3.8.0",
+    "django-htmx>=1.18.0",
+    "django-extensions>=3.2.3",
+    "django-environ>=0.11.2",
+    "humanfriendly>=10.0",
+    "django-crispy-forms>=2.2",
+    "crispy-tailwind>=1.0.3",
+    "django-browser-reload>=1.13.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+license = { text = "MIT" }
+
+[project.scripts]
+"hiring-test-frontend-2024" = "hiring_test_frontend_2024:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "black>=24.4.2",
+    "djhtml>=3.0.6",
+    "pre-commit>=3.7.1",
+    "pip>=24.1.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hiring_test_frontend_2024"]
