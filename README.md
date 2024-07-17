@@ -28,7 +28,7 @@ Already done for you were the following commands:
 rye run django-admin startproject config .
 rye run python manage.py tailwind init
 rye run python manage.py tailwind install
-rye run python manage.py startapp reading_journal
+rye run python manage.py startapp deckfusion
 rye run python manage.py migrate
 ```
 

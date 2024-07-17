@@ -26,6 +26,8 @@ django==5.0.7
     # via hiring-test-frontend-2024
 django-browser-reload==1.13.0
     # via hiring-test-frontend-2024
+django-colorfield==0.11.0
+    # via hiring-test-frontend-2024
 django-crispy-forms==2.2
     # via crispy-tailwind
     # via hiring-test-frontend-2024
@@ -39,5 +41,7 @@ django-tailwind==3.8.0
     # via hiring-test-frontend-2024
 humanfriendly==10.0
     # via hiring-test-frontend-2024
+pillow==10.4.0
+    # via django-colorfield
 sqlparse==0.5.1
     # via django

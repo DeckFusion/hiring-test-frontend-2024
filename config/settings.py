@@ -43,9 +43,16 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tailwind",
     "theme",
-    "reading_journal",
+    "crispy_forms",
+    "crispy_tailwind",
+    "deckfusion",
+    "colorfield",
     "django_browser_reload",
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

@@ -20,6 +20,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("reading_journal.urls")),
+    path("", include("deckfusion.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

@@ -33,6 +33,8 @@ django==5.0.7
     # via hiring-test-frontend-2024
 django-browser-reload==1.13.0
     # via hiring-test-frontend-2024
+django-colorfield==0.11.0
+    # via hiring-test-frontend-2024
 django-crispy-forms==2.2
     # via crispy-tailwind
     # via hiring-test-frontend-2024
@@ -59,6 +61,8 @@ packaging==24.1
     # via black
 pathspec==0.12.1
     # via black
+pillow==10.4.0
+    # via django-colorfield
 pip==24.1.2
 platformdirs==4.2.2
     # via black
