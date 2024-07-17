@@ -19,9 +19,12 @@ def info(request: HttpRequest):
     }
     if request.method == "POST":
         if form.is_valid():
+            print("itsva lue")
             # form.save()
             # book = form.instance
-            return redirect("visual_identity")
+            return redirect("stats")
+        else:
+            print(form.errors)
     return render(request, "deckfusion/info_form.html", ctx)
 
 

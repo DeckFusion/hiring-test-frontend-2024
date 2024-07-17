@@ -354,3 +354,4 @@ Temporary Items
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+config

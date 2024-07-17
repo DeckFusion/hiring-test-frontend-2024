@@ -9,11 +9,12 @@ class Brand(models.Model):
     name = models.CharField(max_length=255, blank=True)
     description = models.CharField(max_length=255, blank=True)
     tagline = models.CharField(max_length=255, blank=True)
-    color = ColorField(default="#FF0000")
-    # authors = models.ManyToManyField(Author)
 
-    def __str__(self):
-        return self.name
+    color = models.CharField(max_length=7, default="#023458")
+    django_color = ColorField(default="#FF0000")
+
+    # def __str__(self):
+    #     return self.name
 
 
 class Stat(models.Model):

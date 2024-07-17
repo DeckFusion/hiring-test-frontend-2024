@@ -5,6 +5,9 @@
 
     {% include "deckfusion/form_header.html" %}
     <div class="w-[500px] mx-auto">
+      <div class="mb-4">
+        Let's stat with who you are
+      </div>
       <form action="{% url 'info' %}" method="post">
         {% csrf_token %}
         {{ form|crispy }}
