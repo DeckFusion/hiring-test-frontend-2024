@@ -1,0 +1,36 @@
+<article id="step-3">
+    <header>
+        <h2 class="text-xl font-semibold mb-4">Typography</h2>
+    </header>
+    <form id="form-step-3">
+        <div class="mb-4">
+            <label class="block text-gray-700" for="headingFont">Heading Font</label>
+            <select id="headingFont" name="headingFont" class="mt-1 p-2 border rounded w-full">
+                <option value="" disabled selected>Selected</option>
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700" for="bodyFont">Body Font</label>
+            <select id="bodyFont" name="bodyFont" class="mt-1 p-2 border rounded w-full">
+                <option value="" disabled selected>Selected</option>
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+        </div>
+        <div id="error-message" class="text-red-500 mb-4" style="display: none;"></div>
+        <nav class="flex justify-between">
+            <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded" hx-get="html/step2.html"
+                hx-target="#form-container" onclick="step3SaveAllValues()">Previous</button>
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" hx-target="#form-container"
+                onclick="step3HandleNextClick()">Next</button>
+        </nav>
+    </form>
+</article>
+
+<script>
+    step3LoadAllValues()
+</script>

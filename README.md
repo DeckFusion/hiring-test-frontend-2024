@@ -10,11 +10,26 @@ Please complete this section with your project details.
 
 **How to Run the Project**
 
-[Your instructions here]
+You can view the running demo [here](https://usman-jamil.github.io/hiring-test-frontend-2024/)
+
+```bash
+# Start Development Server
+npm run start
+
+# Start Server with optimized build
+npm run start:optimized
+
+# Run the Build
+npm run build
+```
 
 **Design Decisions**
 
-[Your explanation here]
+ - We have opted to use HTMX pages as that is more relevant to the job role. Self contained HTMX pages are better suited in terms of scalability. Locality of behavior (Single responsibility principal) is much better in HTMX. 
+ - We have used gulp to generate an optimized build. We needed this mechanism for automating certain tasks such as generating optamized builds. Gulp is popular in the node community and has many plugins that can help you accomplish alot of diffferent tasks.
+ - We have used vanilla javascript without any frameworks. I believe using vanilla javascript is better suited for demonstrating code programming skills. Thats why we opted out of using any UI frameworks.
+ - TailwindCss was used for stylesheets. Tailwind has made a name for its self in the front-end community and favors simplicity. It is simpler when compared to css-in-js frameworks.
+ - Local storage has been used for state persistance across the form steps. Given the time frame, local storage seemed like a good choice to manage the state across different formsteps. Given a more reasonable timeframe, a more comprehensive state management can be implemented.
 
 ---
 
